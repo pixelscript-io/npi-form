@@ -1,0 +1,11 @@
+:root {
+  --button-bg-color: #228be6;
+  --button-bg-color--hover: #1c7ed6;
+  --button-text-color: #ffffff;
+  --error-bg-color: #fff5f5;
+  --error-border-color: #ff8787;
+  --main-bg-color: #f8f9fa;
+  --main-font-family: 'Inter', sans-serif;
+  --submit-bg-color: #20c997;
+  --submit-bg-color--hover: #12b886;
+}

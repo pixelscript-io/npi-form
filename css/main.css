@@ -1,0 +1,85 @@
+/* CSS Imports */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import 'variables.css';
+
+
+/* Style Overwrites */
+html, body {
+  background-color: var(--main-bg-color);
+  font-family: var(--main-font-family) !important;
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, p {
+  font-family: var(--main-font-family) !important;
+  font-weight: 600 !important;
+}
+
+label {
+  font-size: 0.75em !important;
+  font-weight: 500 !important;
+}
+
+button {
+  font-family: var(--main-font-family) !important;
+  font-weight: 600 !important;
+}
+
+.ui.basic.primary.button {
+  background-color: var(--button-bg-color) !important;
+  box-shadow: none !important;
+  color: var(--button-text-color) !important;
+}
+
+.ui.basic.primary.button:hover {
+  background-color: var(--button-bg-color--hover) !important;
+  box-shadow: none !important;
+  color: var(--button-text-color) !important;
+}
+
+.ui.basic.green.button {
+  background-color: var(--submit-bg-color) !important;
+  box-shadow: none !important;
+  color: var(--button-text-color) !important;
+}
+
+.ui.basic.green.button:hover {
+  background-color: var(--submit-bg-color--hover) !important;
+  box-shadow: none !important;
+  color: var(--button-text-color) !important;
+}
+
+.ui.container {
+  padding-bottom: 4rem !important;
+}
+
+.ui.segment {
+  padding: 2rem 1.5rem;
+}
+
+.fields {
+  margin: 0 -0.5rem 2rem -0.5rem !important;
+}
+
+.button {
+  margin: 2rem 0 1rem 0 !important;
+}
+
+input[type="date" i] {
+  font-size: 1.14rem !important;
+}
+
+
+/* Custom ID's & Classes */
+#pageHeader {
+  padding: 3rem 0;
+}
+
+.segmentDivider {
+  margin: 4rem 0 4rem 0 !important;
+}
+
+.error {
+  background-color: var(--error-bg-color) !important;
+  border-color: var(--error-border-color) !important;
+}
