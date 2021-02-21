@@ -2,6 +2,18 @@ $(document).ready(function () {
   // Add custom dropdown functionality
   $('.dropdown').dropdown();
 
+  // Add custom checkbox functionality
+  $('.checkbox').checkbox();
+
+  // Add custom signature box functionality
+  $('.js-signature').jqSignature();
+
+  // Clears the signature box canvas
+  $("#btnClearSignature").click(function () {
+    event.preventDefault();
+    $('.js-signature').jqSignature('clearCanvas');
+  });
+
   // Validate all 'required' fields
   var submit_button = document.getElementById("submit_button");
 
