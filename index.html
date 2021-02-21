@@ -134,16 +134,16 @@
             <div class="fields">
               <div class="required field">
                 <label>Sex</label>
-                <div class="ui selection dropdown">
+                <div class="ui selection dropdown requiredDropdown">
                   <input type="hidden"
                          name="sex">
                   <i class="dropdown icon"></i>
-                  <div class="default text">Sex</div>
+                  <div class="default text">Select your sex</div>
                   <div class="menu">
                     <div class="item"
-                         data-value="0">Male</div>
+                         data-value="Male">Male</div>
                     <div class="item"
-                         data-value="1">Female</div>
+                         data-value="Female">Female</div>
                   </div>
                 </div>
               </div>
@@ -151,16 +151,16 @@
                 <label>Gender</label>
                 <div class="ui selection dropdown">
                   <input type="hidden"
-                         name="sex">
+                         name="gender">
                   <i class="dropdown icon"></i>
                   <div class="default text">Select if different than Sex</div>
                   <div class="menu">
                     <div class="item"
-                         data-value="0">Male</div>
+                         data-value="Male">Male</div>
                     <div class="item"
-                         data-value="1">Female</div>
+                         data-value="Female">Female</div>
                     <div class="item"
-                         data-value="2">Other</div>
+                         data-value="Other">Other</div>
                   </div>
                 </div>
               </div>
@@ -192,59 +192,59 @@
             <div class="fields">
               <div class="required field">
                 <label>Height (feet)</label>
-                <div class="ui selection dropdown">
+                <div class="ui selection dropdown requiredDropdown">
                   <input type="hidden"
                          name="heightFt">
                   <i class="dropdown icon"></i>
                   <div class="default text">Height</div>
                   <div class="menu">
                     <div class="item"
-                         data-value="0">3ft</div>
+                         data-value="3ft">3ft</div>
                     <div class="item"
-                         data-value="1">4ft</div>
+                         data-value="4ft">4ft</div>
                     <div class="item"
-                         data-value="2">5ft</div>
+                         data-value="5ft">5ft</div>
                     <div class="item"
-                         data-value="3">6ft</div>
+                         data-value="6ft">6ft</div>
                     <div class="item"
-                         data-value="4">7ft</div>
+                         data-value="7ft">7ft</div>
                     <div class="item"
-                         data-value="5">8ft</div>
+                         data-value="8ft">8ft</div>
                   </div>
                 </div>
               </div>
               <div class="required field">
                 <label>Height (inches)</label>
-                <div class="ui selection dropdown">
+                <div class="ui selection dropdown requiredDropdown">
                   <input type="hidden"
                          name="heightIn">
                   <i class="dropdown icon"></i>
                   <div class="default text">Height</div>
                   <div class="menu">
                     <div class="item"
-                         data-value="0">0"</div>
+                         data-value="0in">0"</div>
                     <div class="item"
-                         data-value="1">1"</div>
+                         data-value="1in">1"</div>
                     <div class="item"
-                         data-value="2">2"</div>
+                         data-value="2in">2"</div>
                     <div class="item"
-                         data-value="3">3"</div>
+                         data-value="3in">3"</div>
                     <div class="item"
-                         data-value="4">4"</div>
+                         data-value="4in">4"</div>
                     <div class="item"
-                         data-value="5">5"</div>
+                         data-value="5in">5"</div>
                     <div class="item"
-                         data-value="6">6"</div>
+                         data-value="6in">6"</div>
                     <div class="item"
-                         data-value="7">7"</div>
+                         data-value="7in">7"</div>
                     <div class="item"
-                         data-value="8">8"</div>
+                         data-value="8in">8"</div>
                     <div class="item"
-                         data-value="9">9"</div>
+                         data-value="9in">9"</div>
                     <div class="item"
-                         data-value="10">10"</div>
+                         data-value="10in">10"</div>
                     <div class="item"
-                         data-value="11">11"</div>
+                         data-value="11in">11"</div>
                   </div>
                 </div>
               </div>
@@ -284,7 +284,7 @@
               </div>
               <div class="required field">
                 <label>Drivers License Issued State</label>
-                <div class="ui selection dropdown">
+                <div class="ui selection dropdown requiredDropdown">
                   <input type="hidden"
                          name="dlIssued">
                   <i class="dropdown icon"></i>
@@ -458,21 +458,21 @@
             <div class="fields">
               <div class="required field">
                 <label>Describe the problem you would like addressed and when it started.</label>
-                <textarea></textarea>
+                <textarea class="requiredTextarea"></textarea>
               </div>
             </div>
 
             <div class="fields">
               <div class="required field">
                 <label>Have you treated this problem before? How and when?</label>
-                <textarea></textarea>
+                <textarea class="requiredTextarea"></textarea>
               </div>
             </div>
 
             <div class="fields">
               <div class="required field">
                 <label>Please list all illnesses and/or hospitalizations/surgeries you have had in the past.</label>
-                <textarea></textarea>
+                <textarea class="requiredTextarea"></textarea>
               </div>
             </div>
 
@@ -480,56 +480,52 @@
               <div class="required field">
                 <label>Please list the name and dose of any current medication and/or additional supplements and
                   vitamins you are taking.</label>
-                <textarea></textarea>
+                <textarea class="requiredTextarea"></textarea>
               </div>
             </div>
 
             <div class="fields">
               <div class="required field">
                 <label>Please list any family history of disease.</label>
-                <textarea></textarea>
+                <textarea class="requiredTextarea"></textarea>
               </div>
             </div>
 
             <div class="fields">
               <div class="required field">
                 <label>Please list all known allergies.</label>
-                <textarea></textarea>
+                <textarea class="requiredTextarea"></textarea>
               </div>
             </div>
 
             <div class="fields">
               <div class="required field">
                 <label>Do you currently use tobacco?</label>
-                <div class="ui selection dropdown">
+                <div class="ui selection dropdown requiredDropdown">
                   <input type="hidden"
                          name="condition">
                   <i class="dropdown icon"></i>
                   <div class="default text">Please Select</div>
                   <div class="menu">
                     <div class="item"
-                         data-value="0">0</div>
+                         data-value="Yes">Yes</div>
                     <div class="item"
-                         data-value="1">1</div>
-                    <div class="item"
-                         data-value="2">2</div>
+                         data-value="No">No</div>
                   </div>
                 </div>
               </div>
               <div class="required field">
                 <label>Have you used tobacco in the past?</label>
-                <div class="ui selection dropdown">
+                <div class="ui selection dropdown requiredDropdown">
                   <input type="hidden"
                          name="condition">
                   <i class="dropdown icon"></i>
                   <div class="default text">Please Select</div>
                   <div class="menu">
                     <div class="item"
-                         data-value="0">0</div>
+                         data-value="Yes">Yes</div>
                     <div class="item"
-                         data-value="1">1</div>
-                    <div class="item"
-                         data-value="2">2</div>
+                         data-value="No">No</div>
                   </div>
                 </div>
               </div>
@@ -538,35 +534,31 @@
             <div class="fields">
               <div class="required field">
                 <label>Do you currently use recreational drugs?</label>
-                <div class="ui selection dropdown">
+                <div class="ui selection dropdown requiredDropdown">
                   <input type="hidden"
                          name="condition">
                   <i class="dropdown icon"></i>
                   <div class="default text">Please Select</div>
                   <div class="menu">
                     <div class="item"
-                         data-value="0">0</div>
+                         data-value="Yes">Yes</div>
                     <div class="item"
-                         data-value="1">1</div>
-                    <div class="item"
-                         data-value="2">2</div>
+                         data-value="No">No</div>
                   </div>
                 </div>
               </div>
               <div class="required field">
                 <label>Are you currently pregnant?</label>
-                <div class="ui selection dropdown">
+                <div class="ui selection dropdown requiredDropdown">
                   <input type="hidden"
                          name="condition">
                   <i class="dropdown icon"></i>
                   <div class="default text">Please Select</div>
                   <div class="menu">
                     <div class="item"
-                         data-value="0">0</div>
+                         data-value="Yes">Yes</div>
                     <div class="item"
-                         data-value="1">1</div>
-                    <div class="item"
-                         data-value="2">2</div>
+                         data-value="No">No</div>
                   </div>
                 </div>
               </div>
@@ -582,30 +574,16 @@
                   <div class="default text">Please Select</div>
                   <div class="menu">
                     <div class="item"
-                         data-value="0">0</div>
+                         data-value="Yes">Yes</div>
                     <div class="item"
-                         data-value="1">1</div>
-                    <div class="item"
-                         data-value="2">2</div>
+                         data-value="No">No</div>
                   </div>
                 </div>
               </div>
               <div class="field">
                 <label>How many hours of sleep do you get at night?</label>
-                <div class="ui selection dropdown">
-                  <input type="hidden"
-                         name="condition">
-                  <i class="dropdown icon"></i>
-                  <div class="default text">Please Select</div>
-                  <div class="menu">
-                    <div class="item"
-                         data-value="0">0</div>
-                    <div class="item"
-                         data-value="1">1</div>
-                    <div class="item"
-                         data-value="2">2</div>
-                  </div>
-                </div>
+                <input type="text"
+                       placeholder="">
               </div>
             </div>
 
@@ -619,11 +597,11 @@
                   <div class="default text">Please Select</div>
                   <div class="menu">
                     <div class="item"
-                         data-value="0">0</div>
+                         data-value="Good">Good</div>
                     <div class="item"
-                         data-value="1">1</div>
+                         data-value="Fair">Fair</div>
                     <div class="item"
-                         data-value="2">2</div>
+                         data-value="Poor">Poor</div>
                   </div>
                 </div>
               </div>
@@ -1283,7 +1261,7 @@
               <div class="required field">
                 <label>Do you consent to the use of audio and video recording for your in-office and/or telemedicine
                   visit (required)?</label>
-                <div class="ui selection dropdown">
+                <div class="ui selection dropdown requiredDropdown">
                   <input type="hidden"
                          name="condition">
                   <i class="dropdown icon"></i>
@@ -1336,7 +1314,7 @@
         </div>
         <!-- END SEGMENT: Signature -->
 
-        <button id="submit_button"
+        <button id="btnSubmit"
                 class="fluid ui huge green basic button"
                 type="submit">Submit Form</button>
       </form>

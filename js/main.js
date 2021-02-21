@@ -38,10 +38,17 @@ $(document).ready(function () {
   // Add custom signature box functionality
   $('.js-signature').jqSignature();
 
-  // Clears the signature box canvas
+  // Clear the signature box canvas
   $("#btnClearSignature").click(function () {
     event.preventDefault();
     $('.js-signature').jqSignature('clearCanvas');
+  });
+
+  // Store the signature as a base64 image on form submit
+  $("#btnSubmit").click(function () {
+    var signature64 = $('.js-signature').jqSignature('getDataURL');
+    // (TODO:Joe) Remove this for production
+    console.log(signature64);
   });
 
 
@@ -49,14 +56,35 @@ $(document).ready(function () {
   // Form Validation
   // ***
 
-  // Validate all 'required' fields
-  var submit_button = document.getElementById("submit_button");
+  // Validate fields on form submit
+  var submitButton = document.getElementById("btnSubmit");
 
-  submit_button.addEventListener("click", function (e) {
+  submitButton.addEventListener("click", function (e) {
     var required = document.querySelectorAll("input[required]");
+    var requiredDropdown = document.querySelectorAll(".requiredDropdown");
+    var requiredTextarea = document.querySelectorAll(".requiredTextarea");
 
+    // Validate all required text inputs
     required.forEach(function (element) {
       if (element.value.trim() == "") {
+        element.classList.add("error");
+      } else {
+        element.classList.remove("error");
+      }
+    });
+
+    // Validate all required dropdowns
+    requiredDropdown.forEach(function (element) {
+      if (element.getElementsByClassName("default").length > 0) {
+        element.classList.add("error");
+      } else {
+        element.classList.remove("error");
+      }
+    });
+
+    // Validate all required textareas
+    requiredTextarea.forEach(function (element) {
+      if (element.value.length == 0) {
         element.classList.add("error");
       } else {
         element.classList.remove("error");
