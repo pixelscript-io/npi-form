@@ -38,6 +38,8 @@
                 <label>Full Name</label>
                 <input type="text"
                        placeholder="Full Name"
+                       id="Name"
+                       name="Name"
                        required>
               </div>
             </div>
@@ -46,12 +48,16 @@
               <div class="field">
                 <label>Home Phone</label>
                 <input type="tel"
-                       placeholder="555-555-5555">
+                       placeholder="555-555-5555"
+                       id="Home_Phone"
+                       name="Home_Phone">
               </div>
               <div class="required field">
                 <label>Cell Phone</label>
                 <input type="tel"
                        placeholder="555-555-5555"
+                       id="Cell_Phone"
+                       name="Cell_Phone"
                        required>
               </div>
             </div>
@@ -61,6 +67,8 @@
                 <label>Email Address</label>
                 <input type="email"
                        placeholder="your@email.com"
+                       id="Email"
+                       name="Email"
                        required>
               </div>
             </div>
@@ -70,12 +78,16 @@
                 <label>Address</label>
                 <input type="text"
                        placeholder="55555 Sesame St."
+                       id="Address"
+                       name="Address"
                        required>
               </div>
               <div class="field">
                 <label>Address Line 2</label>
                 <input type="text"
-                       placeholder="">
+                       placeholder=""
+                       id="Address_Line_2"
+                       name="Address_Line_2">
               </div>
             </div>
 
@@ -84,13 +96,16 @@
                 <label>City</label>
                 <input type="text"
                        placeholder="City"
+                       id="City"
+                       name="City"
                        required>
               </div>
               <div class="required disabled field">
                 <label>State</label>
                 <div class="ui selection dropdown">
                   <input type="hidden"
-                         name="state">
+                         id="State"
+                         name="State">
                   <i class="dropdown icon"></i>
                   <div class="default text">State</div>
                   <div class="menu stateDropdown">
@@ -104,12 +119,16 @@
                 <label>ZIP Code</label>
                 <input type="text"
                        placeholder="ZIP Code"
+                       id="Zipcode"
+                       name="Zipcode"
                        required>
               </div>
               <div class="required field">
                 <label>County</label>
                 <input type="text"
                        placeholder="County"
+                       id="County"
+                       name="County"
                        required>
               </div>
             </div>
@@ -136,7 +155,8 @@
                 <label>Sex</label>
                 <div class="ui selection dropdown requiredDropdown">
                   <input type="hidden"
-                         name="sex">
+                         id="Sex"
+                         name="Sex">
                   <i class="dropdown icon"></i>
                   <div class="default text">Select your sex</div>
                   <div class="menu">
@@ -151,7 +171,8 @@
                 <label>Gender</label>
                 <div class="ui selection dropdown">
                   <input type="hidden"
-                         name="gender">
+                         id="Gender"
+                         name="Gender">
                   <i class="dropdown icon"></i>
                   <div class="default text">Select if different than Sex</div>
                   <div class="menu">
@@ -170,7 +191,9 @@
               <div class="field">
                 <label>Specify Gender</label>
                 <input type="text"
-                       placeholder="Specify Gender">
+                       placeholder="Specify Gender"
+                       id="GenderOther"
+                       name="GenderOther">
               </div>
             </div>
 
@@ -179,13 +202,17 @@
                 <label>Your Date of Birth (DOB)</label>
                 <input type="date"
                        placeholder="55/55/5555"
+                       id="DOB"
+                       name="DOB"
                        required>
               </div>
               <div class="required field">
                 <label>Weight (lbs)</label>
                 <input type="text"
                        placeholder="Weight"
-                       required>
+                       required
+                       id="Weight"
+                       name="Weight">
               </div>
             </div>
 
@@ -194,7 +221,8 @@
                 <label>Height (feet)</label>
                 <div class="ui selection dropdown requiredDropdown">
                   <input type="hidden"
-                         name="heightFt">
+                         id="Height_Feet"
+                         name="Height_Feet">
                   <i class="dropdown icon"></i>
                   <div class="default text">Height</div>
                   <div class="menu">
@@ -217,7 +245,8 @@
                 <label>Height (inches)</label>
                 <div class="ui selection dropdown requiredDropdown">
                   <input type="hidden"
-                         name="heightIn">
+                         id="Height_Inches"
+                         name="Height_Inches">
                   <i class="dropdown icon"></i>
                   <div class="default text">Height</div>
                   <div class="menu">
@@ -271,7 +300,9 @@
               <div class="field">
                 <label>Patient Registry Number (optional)</label>
                 <input type="text"
-                       placeholder="Patient Registry Number">
+                       placeholder="Patient Registry Number"
+                       id="PatientRegistryNumber"
+                       name="PatientRegistryNumber">
               </div>
             </div>
 
@@ -280,13 +311,16 @@
                 <label>Drivers License #</label>
                 <input type="text"
                        placeholder="Drivers License #"
+                       id="Drivers_License"
+                       name="Drivers_License"
                        required>
               </div>
               <div class="required field">
                 <label>Drivers License Issued State</label>
                 <div class="ui selection dropdown requiredDropdown">
                   <input type="hidden"
-                         name="dlIssued">
+                         id="Drivers_License_State"
+                         name="Drivers_License_State">
                   <i class="dropdown icon"></i>
                   <div class="default text">State</div>
                   <div class="menu stateDropdown">
@@ -299,8 +333,8 @@
               <div class="field">
                 <label>Drivers License Photo Upload</label>
                 <input type="file"
-                       id="myFile"
-                       name="filename">
+                       id="License_Photo"
+                       name="License_Photo">
               </div>
             </div>
           </div>
@@ -325,12 +359,16 @@
               <div class="field">
                 <label>Emergency Contact Name</label>
                 <input type="text"
-                       placeholder="Emergency Contact Name">
+                       placeholder="Emergency Contact Name"
+                       id="Emergency_Contact_Name"
+                       name="Emergency_Contact_Name">
               </div>
               <div class="field">
                 <label>Emergency Contact Phone #</label>
                 <input type="tel"
-                       placeholder="555-555-5555">
+                       placeholder="555-555-5555"
+                       id="Emergency_Contact_Phone"
+                       name="Emergency_Contact_Phone">
               </div>
             </div>
           </div>
@@ -355,12 +393,16 @@
               <div class="field">
                 <label>Primary Care Physician Name</label>
                 <input type="text"
-                       placeholder="Primary Care Physician Name">
+                       placeholder="Primary Care Physician Name"
+                       id="Primary_Care_Physician_Name"
+                       name="Primary_Care_Physician_Name">
               </div>
               <div class="field">
                 <label>Primary Care Physician Phone #</label>
                 <input type="tel"
-                       placeholder="555-555-5555">
+                       placeholder="555-555-5555"
+                       id="Primary_Care_Physician_Phone"
+                       name="Primary_Care_Physician_Phone">
               </div>
             </div>
           </div>
@@ -386,12 +428,16 @@
               <div class="field">
                 <label>Father's Name</label>
                 <input type="text"
-                       placeholder="Father's Name">
+                       placeholder="Father's Name"
+                       id="Fathers_Name"
+                       name="Fathers_Name">
               </div>
               <div class="field">
                 <label>Father's Phone #</label>
                 <input type="tel"
-                       placeholder="555-555-5555">
+                       placeholder="555-555-5555"
+                       id="Fathers_Phone"
+                       name="Fathers_Phone">
               </div>
             </div>
 
@@ -399,12 +445,16 @@
               <div class="field">
                 <label>Mother's Name</label>
                 <input type="text"
-                       placeholder="Mother's Name">
+                       placeholder="Mother's Name"
+                       id="Mothers_Name"
+                       name="Mothers_Name">
               </div>
               <div class="field">
                 <label>Mother's Phone #</label>
                 <input type="tel"
-                       placeholder="555-555-5555">
+                       placeholder="555-555-5555"
+                       id="Mothers_Phone"
+                       name="Mothers_Phone">
               </div>
             </div>
 
@@ -412,12 +462,16 @@
               <div class="field">
                 <label>Caregiver's Name</label>
                 <input type="text"
-                       placeholder="Caregiver's Name">
+                       placeholder="Caregiver's Name"
+                       id="Caregivers_Name"
+                       name="Caregivers_Name">
               </div>
               <div class="field">
                 <label>Caregiver's Phone #</label>
                 <input type="tel"
-                       placeholder="555-555-5555">
+                       placeholder="555-555-5555"
+                       id="Caregivers_Phone"
+                       name="Caregivers_Phone">
               </div>
             </div>
           </div>
@@ -445,7 +499,8 @@
                 <label>Qualifying Condition</label>
                 <div class="ui selection dropdown">
                   <input type="hidden"
-                         name="condition">
+                         id="Qualifying_Condition"
+                         name="Qualifying_Condition">
                   <i class="dropdown icon"></i>
                   <div class="default text">Qualifying Condition</div>
                   <div class="menu"
@@ -455,24 +510,74 @@
               </div>
             </div>
 
+            <!-- Display only if Qualifying Condition == 'Cancer'. -->
+            <div class="fields">
+              <div class="field">
+                <label>Cancer Type</label>
+                <input type="text"
+                       placeholder="Cancer Type"
+                       id="QC_Cancer_Type"
+                       name="QC_Cancer_Type">
+              </div>
+            </div>
+
+            <!-- Display only if Qualifying Condition == 'Terminal Illness'. -->
+            <div class="fields">
+              <div class="field">
+                <label>Terminal Illness</label>
+                <input type="text"
+                       placeholder="Terminal Illness"
+                       id="QC_Terminal_Illness"
+                       name="QC_Terminal_Illness">
+              </div>
+            </div>
+
+            <!-- Display only if Qualifying Condition == 'Chronic Nonmalignant Pain'. -->
+            <div class="fields">
+              <div class="field">
+                <label>Pain Type</label>
+                <input type="text"
+                       placeholder="Pain Type"
+                       id="QC_Pain_Type"
+                       name="QC_Pain_Type">
+              </div>
+            </div>
+
+            <!-- Display only if Qualifying Condition == 'Other. -->
+            <div class="fields">
+              <div class="field">
+                <label>Other Condition</label>
+                <input type="text"
+                       placeholder="Other Condition"
+                       id="QC_Other"
+                       name="QC_Other">
+              </div>
+            </div>
+
             <div class="fields">
               <div class="required field">
                 <label>Describe the problem you would like addressed and when it started.</label>
-                <textarea class="requiredTextarea"></textarea>
+                <textarea class="requiredTextarea"
+                          id="History_of_Illness_1"
+                          name="History_of_Illness_1"></textarea>
               </div>
             </div>
 
             <div class="fields">
               <div class="required field">
                 <label>Have you treated this problem before? How and when?</label>
-                <textarea class="requiredTextarea"></textarea>
+                <textarea class="requiredTextarea"
+                          id="History_of_Illness_2"
+                          name="History_of_Illness_2"></textarea>
               </div>
             </div>
 
             <div class="fields">
               <div class="required field">
                 <label>Please list all illnesses and/or hospitalizations/surgeries you have had in the past.</label>
-                <textarea class="requiredTextarea"></textarea>
+                <textarea class="requiredTextarea"
+                          id="Medical_History_1"
+                          name="Medical_History_1"></textarea>
               </div>
             </div>
 
@@ -480,21 +585,27 @@
               <div class="required field">
                 <label>Please list the name and dose of any current medication and/or additional supplements and
                   vitamins you are taking.</label>
-                <textarea class="requiredTextarea"></textarea>
+                <textarea class="requiredTextarea"
+                          id="Medical_History_2"
+                          name="Medical_History_2"></textarea>
               </div>
             </div>
 
             <div class="fields">
               <div class="required field">
                 <label>Please list any family history of disease.</label>
-                <textarea class="requiredTextarea"></textarea>
+                <textarea class="requiredTextarea"
+                          id="Family_History_of_Disease"
+                          name="Family_History_of_Disease"></textarea>
               </div>
             </div>
 
             <div class="fields">
               <div class="required field">
                 <label>Please list all known allergies.</label>
-                <textarea class="requiredTextarea"></textarea>
+                <textarea class="requiredTextarea"
+                          id="Allergies"
+                          name="Allergies"></textarea>
               </div>
             </div>
 
@@ -503,7 +614,8 @@
                 <label>Do you currently use tobacco?</label>
                 <div class="ui selection dropdown requiredDropdown">
                   <input type="hidden"
-                         name="condition">
+                         id="Current_Tobacco_User"
+                         name="Current_Tobacco_User">
                   <i class="dropdown icon"></i>
                   <div class="default text">Please Select</div>
                   <div class="menu">
@@ -518,7 +630,8 @@
                 <label>Have you used tobacco in the past?</label>
                 <div class="ui selection dropdown requiredDropdown">
                   <input type="hidden"
-                         name="condition">
+                         id="Past_Tobacco_User"
+                         name="Past_Tobacco_User">
                   <i class="dropdown icon"></i>
                   <div class="default text">Please Select</div>
                   <div class="menu">
@@ -536,7 +649,8 @@
                 <label>Do you currently use recreational drugs?</label>
                 <div class="ui selection dropdown requiredDropdown">
                   <input type="hidden"
-                         name="condition">
+                         id="Current_Recreation_Drug_User"
+                         name="Current_Recreation_Drug_User">
                   <i class="dropdown icon"></i>
                   <div class="default text">Please Select</div>
                   <div class="menu">
@@ -551,7 +665,8 @@
                 <label>Are you currently pregnant?</label>
                 <div class="ui selection dropdown requiredDropdown">
                   <input type="hidden"
-                         name="condition">
+                         id="Pregnant"
+                         name="Pregnant">
                   <i class="dropdown icon"></i>
                   <div class="default text">Please Select</div>
                   <div class="menu">
@@ -569,7 +684,8 @@
                 <label>Do you exercise regularly?</label>
                 <div class="ui selection dropdown">
                   <input type="hidden"
-                         name="condition">
+                         id="Exercise_Regularly"
+                         name="Exercise_Regularly">
                   <i class="dropdown icon"></i>
                   <div class="default text">Please Select</div>
                   <div class="menu">
@@ -583,7 +699,9 @@
               <div class="field">
                 <label>How many hours of sleep do you get at night?</label>
                 <input type="text"
-                       placeholder="">
+                       placeholder=""
+                       id="Hour_of_Sleep"
+                       name="Hour_of_Sleep">
               </div>
             </div>
 
@@ -592,7 +710,8 @@
                 <label>Rate your diet.</label>
                 <div class="ui selection dropdown">
                   <input type="hidden"
-                         name="condition">
+                         id="Diet_Rating"
+                         name="Diet_Rating">
                   <i class="dropdown icon"></i>
                   <div class="default text">Please Select</div>
                   <div class="menu">
@@ -609,6 +728,9 @@
 
             <div class="fields ui stackable four column grid">
               <label>Please select any symptoms/conditions that you currently have.</label>
+              <input type="hidden"
+                     id="Symptoms"
+                     name="Symptoms">
               <div class="row">
                 <div class="column">
                   <div class="ui checkbox">
@@ -1299,6 +1421,7 @@
               <div class="required field">
                 <label>Please write your signature in the box below</label>
                 <div class="js-signature"
+                     id="Signature"
                      data-auto-fit="true"
                      data-height="300"
                      data-border="2px dashed #dee2e6"
@@ -1313,6 +1436,21 @@
                   class="fluid ui huge button">Clear Signature</button>
         </div>
         <!-- END SEGMENT: Signature -->
+
+        <!-- Hidden Inputs -->
+        <input type="hidden"
+               id="PhysicianId"
+               name="PhysicianId">
+        <input type="hidden"
+               id="Access_Code"
+               name="Access_Code">
+        <input type="hidden"
+               id="ExistingId"
+               name="ExistingId">
+        <input type="hidden"
+               id="CustomFields"
+               name="CustomFields">
+        <!-- END: Hidden Inputs -->
 
         <button id="btnSubmit"
                 class="fluid ui huge green basic button"
