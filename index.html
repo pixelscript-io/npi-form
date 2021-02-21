@@ -86,18 +86,14 @@
                        placeholder="City"
                        required>
               </div>
-              <div class="required field">
+              <div class="required disabled field">
                 <label>State</label>
                 <div class="ui selection dropdown">
                   <input type="hidden"
                          name="state">
                   <i class="dropdown icon"></i>
                   <div class="default text">State</div>
-                  <div class="menu">
-                    <div class="item"
-                         data-value="0">Alpha</div>
-                    <div class="item"
-                         data-value="1">Bravo</div>
+                  <div class="menu stateDropdown">
                   </div>
                 </div>
               </div>
@@ -293,13 +289,7 @@
                          name="dlIssued">
                   <i class="dropdown icon"></i>
                   <div class="default text">State</div>
-                  <div class="menu">
-                    <div class="item"
-                         data-value="0">0</div>
-                    <div class="item"
-                         data-value="1">1</div>
-                    <div class="item"
-                         data-value="2">2</div>
+                  <div class="menu stateDropdown">
                   </div>
                 </div>
               </div>
@@ -458,13 +448,8 @@
                          name="condition">
                   <i class="dropdown icon"></i>
                   <div class="default text">Qualifying Condition</div>
-                  <div class="menu">
-                    <div class="item"
-                         data-value="0">0</div>
-                    <div class="item"
-                         data-value="1">1</div>
-                    <div class="item"
-                         data-value="2">2</div>
+                  <div class="menu"
+                       id="conditionDropdown">
                   </div>
                 </div>
               </div>

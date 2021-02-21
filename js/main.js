@@ -1,9 +1,29 @@
 $(document).ready(function () {
+  // ***
+  // JSON Files
+  // ***
+
+  // List of States
+  const stateJSON = 'json/states.json';
+
+  // List of Conditions
+  const conditionJSON = 'json/conditions.json';
+
+
+  // ***
+  // Customize HTML Input Functionality
+  // ***
+
   // Add custom dropdown functionality
   $('.dropdown').dropdown();
 
   // Add custom checkbox functionality
   $('.checkbox').checkbox();
+
+
+  // ***
+  // Signature Box
+  // ***
 
   // Add custom signature box functionality
   $('.js-signature').jqSignature();
@@ -13,6 +33,11 @@ $(document).ready(function () {
     event.preventDefault();
     $('.js-signature').jqSignature('clearCanvas');
   });
+
+
+  // ***
+  // Form Validation
+  // ***
 
   // Validate all 'required' fields
   var submit_button = document.getElementById("submit_button");
@@ -28,6 +53,40 @@ $(document).ready(function () {
       }
     });
   });
+
+
+  // ***
+  // Populate Dropdowns
+  // ***
+
+  // Populate State Dropdowns
+  let stateDropdown = $('.stateDropdown');
+
+  stateDropdown.empty();
+  stateDropdown.prop('selectedIndex', 0);
+
+  $.getJSON(stateJSON, function (data) {
+    $.each(data, function (key, entry) {
+      stateDropdown.append($('<div class="item" data-value=""></div>').attr('data-value', entry.abbreviation).text(entry.name));
+    });
+  });
+
+  // Populate Qualifying Conditions Dropdown
+  let conditionDropdown = $('#conditionDropdown');
+
+  conditionDropdown.empty();
+  conditionDropdown.prop('selectedIndex', 0);
+
+  $.getJSON(conditionJSON, function (data) {
+    $.each(data, function (key, entry) {
+      conditionDropdown.append($('<div class="item" data-value=""></div>').attr('data-value', entry.value).text(entry.name));
+    });
+  });
+
+
+  // ***
+  // Smooth Scrolling
+  // ***
 
   // Smooth scroll to Patient Information
   $("#btnContactInformation").click(function () {
