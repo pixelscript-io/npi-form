@@ -1,5 +1,15 @@
 $(document).ready(function () {
   // ***
+  // Fetch Parameters
+  // ***
+
+  // Grab the 'pId' parameter
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  const pId = urlParams.get('pId');
+
+
+  // ***
   // JSON Files
   // ***
 
