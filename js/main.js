@@ -4,9 +4,9 @@ $(document).ready(function () {
   // ***
 
   // Grab the 'pId' parameter from a URL
-  let urlString = 'http://localhost:5000/state.php?pId=1';
-  const url = new URL(urlString);
-  const pId = url.searchParams.get('pId');
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  const pId = urlParams.get('pId');
 
 
   // ***
