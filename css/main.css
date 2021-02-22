@@ -78,6 +78,10 @@ input[type="date" i] {
   padding-left: 2em;
 }
 
+.modal > .content > p {
+  font-weight: 400 !important;
+}
+
 
 /* Custom ID's & Classes */
 #pageHeader {

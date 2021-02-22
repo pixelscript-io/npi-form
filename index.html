@@ -19,6 +19,20 @@
   </head>
 
   <body>
+    <div class="ui tiny modal">
+      <div class="header">
+        Physician ID Not Found
+      </div>
+      <div class="content">
+        <p>
+          We're sorry, but the Patient Intake Form requires a Physician ID.
+        </p>
+      </div>
+      <!-- <div class="actions">
+        <div class="ui button">OK</div>
+      </div> -->
+    </div>
+
     <div class="ui container">
       <h1 id="pageHeader"
           class="ui header">
@@ -195,6 +209,28 @@
                        id="GenderOther"
                        name="GenderOther">
               </div>
+              <div class="required field">
+                <label>Marital Status</label>
+                <div class="ui selection dropdown requiredDropdown">
+                  <input type="hidden"
+                         id="Marital_Status"
+                         name="Marital_Status">
+                  <i class="dropdown icon"></i>
+                  <div class="default text">Marital_Status</div>
+                  <div class="menu">
+                    <div class="item"
+                         data-value="Married">Married</div>
+                    <div class="item"
+                         data-value="Widowed">Widowed</div>
+                    <div class="item"
+                         data-value="Separated">Separated</div>
+                    <div class="item"
+                         data-value="Divorced">Divorced</div>
+                    <div class="item"
+                         data-value="Single">Single</div>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <div class="fields">
@@ -278,6 +314,26 @@
                 </div>
               </div>
             </div>
+
+            <div class="fields">
+              <div class="required field">
+                <label>Social Security Number</label>
+                <input type="number"
+                       placeholder="Full SSN"
+                       id="SSN"
+                       name="SSN"
+                       required>
+              </div>
+
+              <!-- Display only for certain states. -->
+              <div class="required field">
+                <label>Last 4 Digits of SSN</label>
+                <input type="text"
+                       placeholder="Last 4 Digits of SSN"
+                       id="SSN4"
+                       name="SSN4">
+              </div>
+            </div>
           </div>
 
           <div class="ui divider"></div>
@@ -335,6 +391,24 @@
                 <input type="file"
                        id="License_Photo"
                        name="License_Photo">
+              </div>
+            </div>
+
+            <div class="fields">
+              <div class="field">
+                <label>PHIP Upload</label>
+                <input type="file"
+                       id="PHIP_Upload"
+                       name="PHIP_Upload">
+              </div>
+            </div>
+
+            <div class="fields">
+              <div class="field">
+                <label>CTMedUpload</label>
+                <input type="file"
+                       id="CTMedUpload"
+                       name="CTMedUpload">
               </div>
             </div>
           </div>
@@ -512,45 +586,49 @@
 
             <!-- Display only if Qualifying Condition == 'Cancer'. -->
             <div class="fields">
-              <div class="field">
+              <div class="required field">
                 <label>Cancer Type</label>
                 <input type="text"
                        placeholder="Cancer Type"
                        id="QC_Cancer_Type"
-                       name="QC_Cancer_Type">
+                       name="QC_Cancer_Type"
+                       required>
               </div>
             </div>
 
             <!-- Display only if Qualifying Condition == 'Terminal Illness'. -->
             <div class="fields">
-              <div class="field">
+              <div class="required field">
                 <label>Terminal Illness</label>
                 <input type="text"
                        placeholder="Terminal Illness"
                        id="QC_Terminal_Illness"
-                       name="QC_Terminal_Illness">
+                       name="QC_Terminal_Illness"
+                       required>
               </div>
             </div>
 
             <!-- Display only if Qualifying Condition == 'Chronic Nonmalignant Pain'. -->
             <div class="fields">
-              <div class="field">
+              <div class="required field">
                 <label>Pain Type</label>
                 <input type="text"
                        placeholder="Pain Type"
                        id="QC_Pain_Type"
-                       name="QC_Pain_Type">
+                       name="QC_Pain_Type"
+                       required>
               </div>
             </div>
 
             <!-- Display only if Qualifying Condition == 'Other. -->
             <div class="fields">
-              <div class="field">
+              <div class="required field">
                 <label>Other Condition</label>
                 <input type="text"
                        placeholder="Other Condition"
                        id="QC_Other"
-                       name="QC_Other">
+                       name="QC_Other"
+                       required>
               </div>
             </div>
 
@@ -1378,28 +1456,8 @@
           Additional Questions
         </h2>
         <div class="ui attached tall stacked segment">
-          <div class="ui equal width big form">
-            <div class="fields">
-              <div class="required field">
-                <label>Do you consent to the use of audio and video recording for your in-office and/or telemedicine
-                  visit (required)?</label>
-                <div class="ui selection dropdown requiredDropdown">
-                  <input type="hidden"
-                         name="condition">
-                  <i class="dropdown icon"></i>
-                  <div class="default text">I agree and consent to A/V recording</div>
-                  <div class="menu">
-                    <div class="item"
-                         data-value="0">0</div>
-                    <div class="item"
-                         data-value="1">1</div>
-                    <div class="item"
-                         data-value="2">2</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <div id="additionalQuestionsContent"
+               class="ui equal width big form"></div>
 
           <div class="ui divider"></div>
 

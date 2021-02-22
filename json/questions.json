@@ -1,0 +1,32 @@
+[
+  {
+    "id": "Q1",
+    "label": "Additional Question Label",
+    "placeholder": "Placeholder Text",
+    "answers": [
+      {
+        "name": "Alpha",
+        "value": "Alpha"
+      },
+      {
+        "name": "Bravo",
+        "value": "Bravo"
+      }
+    ]
+  },
+  {
+    "id": "Q2",
+    "label": "Additional Question Label 2",
+    "placeholder": "Placeholder Text",
+    "answers": [
+      {
+        "name": "Alpha",
+        "value": "Alpha"
+      },
+      {
+        "name": "Bravo",
+        "value": "Bravo"
+      }
+    ]
+  }
+]

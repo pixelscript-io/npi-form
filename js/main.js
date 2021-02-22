@@ -3,10 +3,10 @@ $(document).ready(function () {
   // Fetch Parameters
   // ***
 
-  // Grab the 'pId' parameter
-  const queryString = window.location.search;
-  const urlParams = new URLSearchParams(queryString);
-  const pId = urlParams.get('pId');
+  // Grab the 'pId' parameter from a URL
+  let urlString = 'http://localhost:5000/state.php?pId=1';
+  const url = new URL(urlString);
+  const pId = url.searchParams.get('pId');
 
 
   // ***
@@ -19,6 +19,9 @@ $(document).ready(function () {
   // List of Conditions
   const conditionJSON = 'json/conditions.json';
 
+  // List of Additional Questions
+  const questionsJSON = 'json/questions.json';
+
 
   // ***
   // Customize HTML Input Functionality
@@ -29,6 +32,16 @@ $(document).ready(function () {
 
   // Add custom checkbox functionality
   $('.checkbox').checkbox();
+
+  // Add custom modal functionality
+  // Display the modal if the pId is not found
+  if (pId === null || pId.length <= 0) {
+    modalState = 'show';
+
+    $('.ui.modal').modal({
+      closable: false,
+    }).modal(modalState);
+  }
 
 
   // ***
@@ -47,8 +60,6 @@ $(document).ready(function () {
   // Store the signature as a base64 image on form submit
   $("#btnSubmit").click(function () {
     var signature64 = $('.js-signature').jqSignature('getDataURL');
-    // (TODO:Joe) Remove this for production
-    console.log(signature64);
   });
 
 
@@ -121,6 +132,69 @@ $(document).ready(function () {
     });
   });
 
+  // Populate Additional Questions Content
+  conditionDropdown.empty();
+
+  $.getJSON(questionsJSON, function (data) {
+    const parentDiv = document.getElementById('additionalQuestionsContent');
+
+    // Build the HTML sctructure of the dropdown box for each Additional Question
+    $.each(data, function (key, entry) {
+      const fieldsDiv = document.createElement('div');
+      fieldsDiv.setAttribute('class', 'fields');
+
+      const requiredFieldDiv = document.createElement('div');
+      requiredFieldDiv.setAttribute('class', 'required field');
+
+      const label = document.createElement('label');
+      const labelContent = document.createTextNode(entry.label);
+
+      const dropdownDiv = document.createElement('div');
+      dropdownDiv.setAttribute('class', 'ui selection dropdown requiredDropdown');
+
+      const input = document.createElement('input');
+      input.setAttribute('type', 'hidden');
+      input.setAttribute('id', entry.id);
+      input.setAttribute('name', entry.label);
+
+      const icon = document.createElement('i');
+      icon.setAttribute('class', 'dropdown icon');
+
+      const defaultDiv = document.createElement('div');
+      defaultDiv.setAttribute('class', 'default text');
+      const placeholderContent = document.createTextNode(entry.placeholder);
+
+      const menuDiv = document.createElement('div');
+      menuDiv.setAttribute('class', 'menu');
+
+      parentDiv.appendChild(fieldsDiv);
+      fieldsDiv.appendChild(requiredFieldDiv);
+      requiredFieldDiv.appendChild(label);
+      label.appendChild(labelContent);
+      requiredFieldDiv.appendChild(dropdownDiv);
+      dropdownDiv.appendChild(input);
+      dropdownDiv.appendChild(icon);
+      dropdownDiv.appendChild(defaultDiv);
+      defaultDiv.appendChild(placeholderContent);
+      dropdownDiv.appendChild(menuDiv);
+
+      // Necessary re-initialization of the dropdown functionality
+      $('.dropdown').dropdown();
+
+      // Populate the dropdown boxes with the available options
+      $.each(entry.answers, function (key, entry) {
+        const itemDiv = document.createElement('div');
+        itemDiv.setAttribute('class', 'item');
+        itemDiv.setAttribute('data-value', entry.value);
+
+        const itemContent = document.createTextNode(entry.name);
+
+        menuDiv.appendChild(itemDiv);
+        itemDiv.appendChild(itemContent);
+      });
+    });
+  });
+
 
   // ***
   // Smooth Scrolling
@@ -173,8 +247,6 @@ $(document).ready(function () {
       behavior: 'smooth'
     });
   });
-
-  // (TODO:Joe) Add logic here to toggle the scroll behavior dependant on whether Additional Questions exists or not.  If not, the #btnCurrentCondition should scroll to #signature instead.
 
   // Smooth scroll to Additional Questions
   $("#btnCurrentCondition").click(function () {
